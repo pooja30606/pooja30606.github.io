@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pooja (Giana) — Portfolio</title>
+  <style>
+    :root{
+      --accent:#2b8aef;
+      --bg:#ffffff;
+      --muted:#666;
+      --card:#f7f9fc;
+      --maxw:900px;
+    }
+    *{box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+    body{margin:0;background:var(--bg);color:#111;display:flex;justify-content:center;padding:24px}
+    .site{max-width:var(--maxw);width:100%}
+    header{display:flex;gap:16px;align-items:center}
+    .photo{
+      width:96px;height:96px;border-radius:12px;background:#ddd;
+      display:flex;align-items:center;justify-content:center;font-weight:bold;color:#555;
+    }
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:760px){.grid{grid-template-columns:2fr 1fr}}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+    .section-title{color:var(--accent);font-weight:600;margin-bottom:8px}
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills li{background:#fff;padding:6px 10px;border-radius:6px;border:1px solid #e6eefb;color:#024}
+    .projects img{max-width:100%;border-radius:8px;display:block;margin-top:8px}
+    .contact a{display:inline-block;margin-right:8px;color:var(--accent);text-decoration:none}
+    footer{margin-top:18px;color:var(--muted);font-size:0.9rem}
+    .btn{display:inline-block;padding:8px 12px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main class="site">
+    <header>
+      <div class="photo">P</div>
+      <div>
+        <h1>Pooja (Giana)</h1>
+        <p class="lead">3rd year B.E. (VLSI) · Robotics & Embedded Systems · C programming · Verilog · FPGA</p>
+        <div><a class="btn" href="#projects">See projects</a></div>
+      </div>
+    </header>
+
+    <div style="height:16px"></div>
+
+    <div class="grid">
+      <!-- left column -->
+      <div>
+        <section class="card" id="about">
+          <div class="section-title">About Me</div>
+          <p>I am a third year Electronics & Communication student specializing in VLSI at RMK Engineering College. I love building practical projects in robotics and embedded systems. Currently learning C and preparing for placements.</p>
+          <p><strong>Internship:</strong> Silicon Craft VLSI — Verilog & FPGA (Digital clock project)</p>
+        </section>
+
+        <section class="card projects" id="projects" style="margin-top:12px">
+          <div class="section-title">Projects</div>
+
+          <div style="margin-top:12px">
+            <h3>Autonomous Firefighting Robot</h3>
+            <p>An Arduino-based robot that detects fire using flame sensors, navigates using ultrasonic sensors, stops at 40 cm and sprays water automatically.</p>
+            <!-- replace project1.jpg with the file you upload to the repo -->
+            <img src="project_firebot.jpg" alt="Autonomous Firefighting Robot image">
+            <p><strong>Skills:</strong> Arduino, Sensors, Circuit Design, Automation</p>
+          </div>
+
+          <div style="margin-top:12px">
+            <h3>Digital Clock (FPGA — Artix-7)</h3>
+            <p>A 24-hour digital clock implemented using Verilog HDL on Artix-7 FPGA. Features clock divider, 7-seg driver and 12/24 mode.</p>
+            <img src="project_clock.jpg" alt="Digital Clock image">
+            <p><strong>Skills:</strong> Verilog, FPGA Programming, Timing Constraints</p>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px" id="skills">
+          <div class="section-title">Skills & Technologies</div>
+          <ul class="skills">
+            <li>C programming</li><li>Verilog HDL</li><li>FPGA (Artix-7)</li><li>Arduino</li><li>Embedded Systems</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- right column -->
+      <aside>
+        <section class="card contact">
+          <div class="section-title">Contact</div>
+          <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">your-linkedin</a></p>
+          <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">Internship & Certificates</div>
+          <p><strong>Silicon Craft VLSI</strong> — Verilog, FPGA basics. Digital clock mini-project completed.</p>
+          <p>Typewriting: First Class with Distinction</p>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">Resume / Download</div>
+          <p><a href="resume.pdf" target="_blank">Download Resume (PDF)</a></p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ by Pooja (Giana). © <span id="year"></span></p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
